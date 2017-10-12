@@ -5,6 +5,7 @@ public class Principal {
 		// TODO 
 //listo para empezar muchachos --- Juan
 		System.out.println("bienvenidos");
+		System.out.println("prueba de commit");
 	}
 
 }
