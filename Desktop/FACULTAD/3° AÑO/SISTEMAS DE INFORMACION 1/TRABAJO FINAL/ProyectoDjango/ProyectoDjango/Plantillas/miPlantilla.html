@@ -1,0 +1,37 @@
+<html>
+    <body>
+
+    {% include "superior/barra.html" %}
+
+    <h2 style="color: green;">
+    Hola esta es mi pagina web
+    </h2>
+    {% if nombre_persona == "Profesor Juan" %}
+        <p>
+            el curso lo imparte el profesor titular
+        </p>
+    {% else %}
+        <p>El curso lo imparte el profesor suplente</p>
+    {% endif %}
+    <p>
+        El nombre del profesor es: {{nombre_persona.upper}} {{apellido_persona.upper}}
+    </p>
+    <p>
+        Estamos viendo el tema de las plantillas a dia: {{momento_actual.day}}/{{momento_actual.month}}/{{momento_actual.year}}
+    </p>
+    <p> <strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+            {% if temas %}
+                {% for el_tema in temas %}
+            
+                    <li> {{el_tema}}</li>
+
+                {% endfor %}
+            {% else %} 
+              <p> NO HAY ELEMENTOS QUE MOSTRAR</p>
+            {% endif %}
+        </ul>
+    </p>
+    </body>
+    </html>
